@@ -7,7 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
-    private static Driver ourInstance = new Driver();
 
     public static WebDriver driver;
 
