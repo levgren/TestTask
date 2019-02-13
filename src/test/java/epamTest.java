@@ -11,13 +11,11 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-
 public class epamTest {
     MainPage mainPage = new MainPage();
-    WebDriver driver = Driver.get();
         @Test
         public void TestOne() {
-            String text= mainPage.goTo("https://www.google.com/")
+            String text = mainPage.goTo("https://www.google.com/")
                         .search("automation")
                         .openFirstLink()
                         .getTextBySelector(By.cssSelector(".apphub_AppName"));
@@ -28,18 +26,17 @@ public class epamTest {
         @Test
         public void TestTwo() {
             SearchPage searchPage= mainPage.goTo("https://www.google.com/")
-                                    .search("automation");
-
+                                           .search("automation");
 
             Boolean result = false;
             for(int i = 0; i<5; i++){
                 if(searchPage.FIndDomain("https://www.testautomationday.com/")){
-                    result=true;
+                    result = true;
                     break;
                 }
                 searchPage.PressNextButton();
             }
-            Assert.assertTrue(result,"there is no");
+            Assert.assertTrue(result,"there is no such link on pagination");
         }
 
     }

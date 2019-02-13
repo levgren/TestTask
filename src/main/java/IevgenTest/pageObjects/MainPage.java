@@ -16,11 +16,11 @@ public class MainPage {
     }
 
     public SearchPage search(String searchText){
-        WebElement search = driver.findElement(By.cssSelector("#tsf > div:nth-child(2) > div > div.RNNXgb > div > div.a4bIc > input"));  // Находим поле поиска
+        WebElement search = driver.findElement(By.cssSelector("#tsf > div:nth-child(2) > div > div.RNNXgb > div > div.a4bIc > input"));  // find search field by selector
         search.sendKeys(searchText);
-        Allure.addAttachment("Search input","Search input 'automation' is done");
+        Allure.addAttachment("Search input","Search input 'automation' is done");       //add reporting
         search.sendKeys(Keys.ENTER);
-        Allure.addAttachment("Press enter","The button 'Enter' is pressed");
+        Allure.addAttachment("Press enter","The button 'Enter' is pressed");        //press Enter
         return new SearchPage();
     }
 
