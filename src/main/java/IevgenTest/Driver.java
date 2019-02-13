@@ -1,11 +1,9 @@
 package IevgenTest;
 
-//import io.qameta.allure.Allure;
+import io.qameta.allure.Allure;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.util.concurrent.TimeUnit;
-
 
 public class Driver {
 
@@ -17,9 +15,6 @@ public class Driver {
 
         //driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-        String url = "https://www.google.com/";
-        driver.get(url);
        //Allure.addAttachment("driver starts", "initial page: " +url);
     }
 
