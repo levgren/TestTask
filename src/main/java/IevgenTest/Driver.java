@@ -6,20 +6,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
+
 public class Driver {
 
-    public static WebDriver driver;
+    private static WebDriver driver;
 
     private Driver() {
-        System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
         driver = new ChromeDriver();
 
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         String url = "https://www.google.com/";
         driver.get(url);
-       // Allure.addAttachment("driver starts", "initial page: " +url);
+       //Allure.addAttachment("driver starts", "initial page: " +url);
     }
 
     public static WebDriver get() {
