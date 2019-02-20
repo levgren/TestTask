@@ -1,16 +1,17 @@
 package IevgenTest.pageObjects;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import IevgenTest.Driver;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 
 
 public class AbstractPage {
-    protected WebDriver driver;
+    protected WebDriver driver= Driver.get();
 
-    public AbstractPage(){
-        WebDriverManager.chromedriver().setup();
-        driver=new ChromeDriver();
+    public void closeDriver(){
+        if(driver!=null)
+            driver.quit();
     }
+
 
 }

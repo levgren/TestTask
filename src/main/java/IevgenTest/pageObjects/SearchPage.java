@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 
 public class SearchPage extends AbstractPage {
 
-   private By linksSelector=By.cssSelector(".iUh30");
-   private By buttonSelector=By.cssSelector("#pnnext");
+    By linksSelector=By.cssSelector(".iUh30");
+    By buttonSelector=By.cssSelector("#pnnext");
 
     public SitePage openFirstLink(){
         driver.findElements(linksSelector).get(0).click();
