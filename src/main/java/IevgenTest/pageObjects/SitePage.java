@@ -1,12 +1,8 @@
 package IevgenTest.pageObjects;
-import IevgenTest.Driver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
-public class SitePage {
-    WebDriver driver = Driver.get();
+public class SitePage extends AbstractPage {
 
-    public String getTextBySelector(By by){
-        return driver.findElement(by).getText();
+    public String getTextFromTitle(){
+        return driver.getTitle();
     }
 }
