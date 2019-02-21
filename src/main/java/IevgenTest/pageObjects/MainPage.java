@@ -1,5 +1,4 @@
 package IevgenTest.pageObjects;
-import IevgenTest.Driver;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

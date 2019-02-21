@@ -12,7 +12,6 @@ public class Driver {
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-       //Allure.addAttachment("driver starts", "initial page: " +url);
     }
 
     public static WebDriver get() {
